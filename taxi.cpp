@@ -13,29 +13,55 @@ int main()
 
     int temp= 0;
 
-    for(int i=0; i<n; i++)
-    {
-        temp += a[i];
-        if(temp%4==0)
-        {
-            coun++;
-            a[i]=0;
-        }
-        else
-        {
-            for(int j=n-1; j>i; j--)
-            {
-                temp += a[j];
-                a[j]=0;
-                if(temp%4==0)
-                {
-                    coun++;
-                    break;
-                }
-            }
-        }
-    }
-    cout<<coun;
+
+
+
+
+
+
+
+
+
+
+
+
+
+//
+//    for(int i=0; i<n; i++)
+//    {
+//        temp += a[i];
+//        if(temp%4==0)
+//        {
+//            coun++;
+//            a[i]=0;
+//        }
+//        else
+//        {
+//            for(int j=n-1; j>i; j--)
+//            {
+//                temp += a[j];
+//                a[j]=0;
+//                if(temp%4==0)
+//                {
+//                    coun++;
+//                    break;
+//                }
+//            }
+//        }
+//    }
+//    cout<<coun;
+
+
+
+
+
+
+
+
+
+
+
+
 //    for(int i=0; i<n; i++)
 //    {
 //        cout<<a[i];
