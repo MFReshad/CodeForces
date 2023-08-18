@@ -3,35 +3,44 @@
 using namespace std;
 int main()
 {
-    unsigned long long int n,coun=0;
-    unsigned long long int a[1000][1000];
+    int n,mxQ=0,mnP=0,tmp=0;
+    int a,b;
     cin>>n;
-    for(unsigned long long int i=0; i<n; i++)
+    while(n--)
     {
-        for(int j=0; j<2; j++)
+        cin>>a>>b;
+        if(a==b)
+            continue;
+        if(mxQ==0 && mnP==0)
         {
-            cin>>a[i][j];
+            mnP=a;
+            mxQ=b;
+            tmp++;
+            continue;
         }
-    }
-    for(unsigned long long int i=0; i<n-1; i++)
-    {
-        if (i + 1 < n)
+
+        if(a>mnP && b<mxQ)
         {
-            if(a[i][0] < a[i+1][0] && a[i][1] > a[i+1][1])
-            {
-                coun++;
-                break;
-            }
+            tmp = -1;
+
+            break;
         }
-    }
+        else if(a<mnP && b>mxQ)
+        {
+            tmp = -1;
+        }
+        else
+        {
+            tmp=0;
+            mnP=a;
+            mxQ=b;
+        }
 
 
-    if(coun>0)
-    {
-        cout<<"Happy Alex";
     }
+
+    if(tmp!=-1)
+        cout<<"Poor Alex"<<endl;
     else
-    {
-        cout<<"Poor Alex";
-    }
+        cout<<"Happy Alex"<<endl;
 }
