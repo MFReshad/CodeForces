@@ -4,5 +4,5 @@ n , m , a, b = map(int, input().strip().split())
 # b = int(input().strip())
 
 import math
-min_cost = min(a,b/m)*n
-print(math.ceil(min_cost))
+min_cost = int(min(a,b/m)*n)
+print(min_cost)
